@@ -1,0 +1,14 @@
+python3 src/inference_dyprag.py \
+    --model_name=qwen2.5-1.5b-instruct \
+    --dataset=hotpotqa \
+    --sample=-1 \
+    --num_train_epochs=1 \
+    --learning_rate=0.0003 \
+    --lora_rank=2 \
+    --lora_alpha=32 \
+    --max_new_tokens=128 \
+    --inference_method=dyprag \
+    --inference_epoch=1 \
+    --projector_path="qwen2.5-1.5b-instruct_hidden32_sample1.0_lr1e-05" \
+    --projector_p=32 \
+    --with_cot
